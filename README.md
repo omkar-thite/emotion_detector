@@ -121,6 +121,3 @@ emotion_detector/
 
 Thank you.
 
-## License
-
-MIT License
