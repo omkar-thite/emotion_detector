@@ -102,7 +102,8 @@ def load_checkpoint(checkpoint_path, model, device):
 
 def transform(image, mean, std):
     return v2.Compose([
-        v2.Resize((48, 48)),
+        v2.Resize(48),
+        v2.CenterCrop(48),
         v2.ToImage(),
         v2.ToDtype(torch.float32, scale=True),
         v2.Normalize(mean=[mean], std=[std]),
